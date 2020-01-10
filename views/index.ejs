@@ -13,8 +13,10 @@
       <ul>
       <% todos.forEach((todo, index) => { %>
         <li>
-          <%= todo.todo %> - <%= todo.done ? "Done" : "Not Done" %>
-          <form class="" action="/<%= index %>?_method=DELETE" method="post">
+          <%= todo.todo %>
+          -
+          <%= todo.done ? "Done" : "Not Done" %>
+          <form action="/<%= index %>?_method=DELETE" method="post">
             <button type="submit" name="button">DELETE</button>
           </form>
         </li>
@@ -24,9 +26,9 @@
       <h3>There are no To Dos yet!</h3>
     <% } %>
     <hr>
-    <form class="" action="/" method="post">
+    <form action="/" method="post">
       <input required type="text" name="todo" value="">
-      <button type="submit" name="button">ADD TODO</button>
+      <button type="submit" name="button">ADD TO DO</button>
     </form>
   </body>
 </html>
